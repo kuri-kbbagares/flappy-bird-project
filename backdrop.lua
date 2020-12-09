@@ -2,7 +2,7 @@ backDrop = Class{}
 
 backgroundXPos = 0
 backgroundMovement_SPEED = 30
-backgroundLOOP_POS = 413
+backgroundLOOP_POS = 583
 
 function backDrop:init()
   self.image = love.graphics.newImage('sprites/background.png')
