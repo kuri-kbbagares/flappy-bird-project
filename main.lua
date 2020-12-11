@@ -5,6 +5,11 @@ VIRTUAL_WIDTH_PUSH = 512
 VIRTUAL_HEIGHT_PUSH = 288
 
 Class = require 'class'
+require 'StateMachine'
+require 'states/BaseState'
+require 'states/CountdownState'
+require 'states/TitleScreenState'
+
 push = require 'push'
 require 'backdrop'
 require 'ground'
@@ -20,6 +25,16 @@ function love.load()
     })
   background = backDrop()
   ground = stoneGround()
+  
+  gStateMachine = StateMachine {
+      ['title'] = function() return TitleScreenState() end,
+      ['countdown'] = function() return CountdownState() end,
+      ['play'] = function() return PlayState() end,
+      ['score'] = function() return ScoreState() end
+  }
+  gStateMachine:change('title')  
+  
+  love.keyboard.keysPressed = {}
 end
 
 function love.resize(width, height)
