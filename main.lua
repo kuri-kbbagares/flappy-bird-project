@@ -6,9 +6,10 @@ VIRTUAL_HEIGHT_PUSH = 288
 
 Class = require 'class'
 require 'StateMachine'
-require 'states/BaseState'
-require 'states/CountdownState'
-require 'states/TitleScreenState'
+require 'StateMachine/BaseState'
+require 'StateMachine/CountdownState'
+require 'StateMachine/TitleScreenState'
+require 'birb'
 
 push = require 'push'
 require 'backdrop'
@@ -17,7 +18,7 @@ require 'ground'
 
 function love.load() 
   love.graphics.setDefaultFilter('nearest', 'nearest')
-  love.window.setTitle('Dame! Ikuu ikuu')
+  love.window.setTitle('Fluffy Bird')
   push:setupScreen(VIRTUAL_WIDTH_PUSH, VIRTUAL_HEIGHT_PUSH , GAME_WIDTH, GAME_HEIGHT, {
       fullscreen = false,
       vsync = true,
@@ -25,6 +26,7 @@ function love.load()
     })
   background = backDrop()
   ground = stoneGround()
+  birb = Birb()
   
   gStateMachine = StateMachine {
       ['title'] = function() return TitleScreenState() end,
@@ -51,6 +53,7 @@ push:start()
   
   background:render()
   ground:render()
+  birb:render()
   
 push:finish()
 end
