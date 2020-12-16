@@ -10,7 +10,7 @@ require 'StateMachine/BaseState'
 require 'StateMachine/CountdownState'
 require 'StateMachine/TitleScreenState'
 require 'birb'
-
+require 'pipe'
 push = require 'push'
 require 'backdrop'
 require 'ground'
@@ -27,6 +27,7 @@ function love.load()
   background = backDrop()
   ground = stoneGround()
   birb = Birb()
+  pipe = brickPipe()
   
   gStateMachine = StateMachine {
       ['title'] = function() return TitleScreenState() end,
@@ -54,6 +55,6 @@ push:start()
   background:render()
   ground:render()
   birb:render()
-  
+  pipe:render()
 push:finish()
 end
