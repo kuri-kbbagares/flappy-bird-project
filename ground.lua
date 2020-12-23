@@ -3,6 +3,7 @@ stoneGround = Class{}
 stoneGroundXPos = 0
 stoneGroundMovement_SPEED = 90
 stoneGroundLOOP_POS = 546
+
 function stoneGround:init()
   self.image = love.graphics.newImage('sprites/ground.png')
   self.x = stoneGroundXPos
