@@ -39,6 +39,15 @@ function PlayState:update(dt)
       end
     end
 
+
+    for k, pair in pairs(self.pipesTable) do
+      for l, pipe in pairs(pair.pipes) do
+        if self.bird:collides(pipe) then
+          -- place the new ScoreState file here to process the collision
+        end
+      end
+    end
+    
 end
 
 function PlayState:render()
