@@ -11,6 +11,7 @@ require 'StateMachine/BaseState'
 require 'StateMachine/CountdownState'
 require 'StateMachine/TitleScreenState'
 require 'StateMachine/PlayState'
+require 'StateMachine/ScoreState'
 
 require 'birb'
 require 'pipe'
@@ -22,6 +23,13 @@ require 'ground'
 function love.load()
   love.graphics.setDefaultFilter('nearest', 'nearest')
   love.window.setTitle('Fluffy Bird')
+  
+    smallFont = love.graphics.newFont('font.ttf', 8)
+    mediumFont = love.graphics.newFont('flappy.ttf', 14)
+    flappyFont = love.graphics.newFont('flappy.ttf', 28)
+    hugeFont = love.graphics.newFont('flappy.ttf', 56)
+    love.graphics.setFont(flappyFont)
+    
   push:setupScreen(VIRTUAL_WIDTH_PUSH, VIRTUAL_HEIGHT_PUSH , GAME_WIDTH, GAME_HEIGHT, {
       fullscreen = false,
       vsync = true,
@@ -40,7 +48,7 @@ function love.load()
       ['score'] = function() return ScoreState() end
   }
 
-  gStateMachine:change('play')
+  gStateMachine:change('title')
   
   love.keyboard.keysPressed = {}
 
