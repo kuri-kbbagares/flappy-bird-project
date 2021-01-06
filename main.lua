@@ -31,12 +31,12 @@ function love.load()
     love.graphics.setFont(flappyFont)
   
     sounds = {
-        ['jump'] = love.audio.newSource('jump.wav', 'static'),
-        ['explosion'] = love.audio.newSource('explosion.wav', 'static'),
-        ['hurt'] = love.audio.newSource('hurt.wav', 'static'),
-        ['score'] = love.audio.newSource('score.wav', 'static'),
+        ['jump'] = love.audio.newSource('sprites/jump.wav', 'static'),
+        ['explosion'] = love.audio.newSource('sprites/explosion.wav', 'static'),
+        ['hurt'] = love.audio.newSource('sprites/hurt.wav', 'static'),
+        ['score'] = love.audio.newSource('sprites/score.wav', 'static'),
 
-        ['music'] = love.audio.newSource('marios_way.mp3', 'static')
+        ['music'] = love.audio.newSource('sprites/marios_way.mp3', 'static')
     }
 
     sounds['music']:setLooping(true)
