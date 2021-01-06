@@ -28,7 +28,7 @@ function PipePair:update(dt)
 end
 
 function PipePair:render()
-    for k, pipe in pairs(self.pipes) do
+    for l, pipe in pairs(self.pipes) do
         pipe:render()
     end
 end
