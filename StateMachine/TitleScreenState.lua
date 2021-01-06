@@ -17,8 +17,8 @@ end
 
 function TitleScreenState:render()
     love.graphics.setFont(flappyFont)
-    love.graphics.printf('Dame! Ikuu ikuu', 0, 64, VIRTUAL_WIDTH, 'center')
+    love.graphics.printf('Dame! Ikuu ikuu', 0, 64, VIRTUAL_WIDTH_PUSH, 'center')
 
     love.graphics.setFont(mediumFont)
-    love.graphics.printf('Press Enter', 0, 100, VIRTUAL_WIDTH, 'center')
+    love.graphics.printf('Press Enter', 0, 100, VIRTUAL_WIDTH_PUSH, 'center')
 end
