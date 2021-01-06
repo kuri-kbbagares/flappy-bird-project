@@ -97,7 +97,6 @@ function love.draw()
   gStateMachine:render()
 
   ground:render()
-  birb:render()
 
   push:finish()
 end
