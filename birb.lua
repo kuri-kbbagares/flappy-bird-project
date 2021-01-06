@@ -20,8 +20,8 @@ function Birb:collides(pipe)
         return true
     end
   end
-
-return false
+  
+  return false
 
 end
 
