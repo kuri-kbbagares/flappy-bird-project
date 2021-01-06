@@ -6,7 +6,7 @@ PIPE_HEIGHT = 288
 PIPE_WIDTH = 70
 
 function brickPipe:init(orientation, y)
-  self.x = VIRTUAL_WIDTH
+  self.x = VIRTUAL_WIDTH_PUSH
   self.y = y
 
   self.width = PIPE_WIDTH
