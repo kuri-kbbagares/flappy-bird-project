@@ -1,7 +1,7 @@
 brickPipe = Class{}
 
 local PIPE_IMAGE = love.graphics.newImage('sprites/brick.png')
-PIPE_SPEED = 60
+PIPE_SPEED = 45
 PIPE_HEIGHT = 288
 PIPE_WIDTH = 70
 

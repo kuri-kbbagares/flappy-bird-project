@@ -13,7 +13,7 @@ function PlayState:update(dt)
 
     self.timer = self.timer + dt
 
-    if self.timer > 3 then
+    if self.timer > 2 then
   
       local y = math.max(-PIPE_HEIGHT + 10,
             math.min(self.limitY + math.random(-20, 20), VIRTUAL_HEIGHT_PUSH - 90 - PIPE_HEIGHT))
