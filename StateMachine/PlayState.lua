@@ -85,7 +85,7 @@ function PlayState:update(dt)
     
    self.bird:update(dt)
 
-    if self.bird.y > VIRTUAL_HEIGHT_PUSH - 15 then
+    if self.bird.y > VIRTUAL_HEIGHT_PUSH - 40 then
         sounds['explosion']:play()
         sounds['hurt']:play()
 

@@ -22,7 +22,7 @@ require 'ground'
 
 function love.load()
   love.graphics.setDefaultFilter('nearest', 'nearest')
-  love.window.setTitle('Fluffy Bird')
+  love.window.setTitle('Fluffy Birb')
   
     smallFont = love.graphics.newFont('font.ttf', 8)
     mediumFont = love.graphics.newFont('flappy.ttf', 14)
